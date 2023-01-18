@@ -2,7 +2,7 @@
 using BuilderPattern.RealWorldExample;
 using BuilderPattern.Structural;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Builder Pattern");
 
 StructuralImplementation();
 
