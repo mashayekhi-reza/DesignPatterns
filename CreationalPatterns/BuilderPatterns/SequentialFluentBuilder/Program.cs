@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using BuilderPattern.RealWorldExample;
-using BuilderPattern.Structural;
+using SequentialFluentBuilder.Example;
+using SequentialFluentBuilder.Structural;
 
-Console.WriteLine("Builder Pattern");
+Console.WriteLine("Sequential Fluent Interface");
 
 StructuralImplementation();
 
@@ -12,16 +12,19 @@ Console.ReadKey();
 
 static void StructuralImplementation()
 {
-	Director director = new();
-
 	IBuilder concreteBuilderA = new ConcreteBuilderA();
 	IBuilder concreteBuilderB = new ConcreteBuilderB();
+	
+	Product productA = concreteBuilderA
+		.CreatePartA()
+		.CreatePartB()
+		.Build();
 
-	director.Contruct(concreteBuilderA);
-	Product productA = concreteBuilderA.GetProduct();
+	Product productB = concreteBuilderB
+		.CreatePartA()
+		.CreatePartB()
+		.Build();
 
-	director.Contruct(concreteBuilderB);
-	Product productB = concreteBuilderB.GetProduct();
 
 	Console.WriteLine("Product A Parts:");
 	PrintProductParts(productA);
@@ -37,16 +40,22 @@ static void PrintProductParts(Product product)
 
 static void ExampleImplementation()
 {
-	Shop shop = new();
-
 	IVehicleBuilder benzBuilder = new BenzBuilder();
 	IVehicleBuilder bmwBuilder = new BmwBuilder();
 
-	shop.Construct(benzBuilder);
-	Vehicle benz = benzBuilder.GetVehicle();
+	Vehicle benz = benzBuilder
+		.SetType()
+		.SetBrand()
+		.AddEngine()
+		.AddBody()
+		.Build();
 
-	shop.Construct(bmwBuilder);
-	Vehicle bmw = bmwBuilder.GetVehicle();
+	Vehicle bmw = bmwBuilder
+		.SetType()
+		.SetBrand()
+		.AddEngine()
+		.AddBody()
+		.Build();
 
 	Console.WriteLine("Benz Specifications:");
 	PrintVehicleParts(benz);

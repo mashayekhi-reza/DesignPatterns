@@ -19,8 +19,8 @@ Console.ReadKey();
 
 static void StructuralImplementationWithoutDirector()
 {
-	ConcreteBuilderA concreteBuilderA = new();
-	ConcreteBuilderB concreteBuilderB = new();
+	IBuilder concreteBuilderA = new ConcreteBuilderA();
+	IBuilder concreteBuilderB = new ConcreteBuilderB();
 
 	Product productA = concreteBuilderA
 		.CreatePartA()
@@ -43,8 +43,8 @@ static void StructuralImplementationWithDirector()
 {
 	Director director = new();
 
-	ConcreteBuilderA concreteBuilderA = new();
-	ConcreteBuilderB concreteBuilderB = new();
+	IBuilder concreteBuilderA = new ConcreteBuilderA();
+	IBuilder concreteBuilderB = new ConcreteBuilderB();
 
 	director.Contruct(concreteBuilderA);
 	Product productA = concreteBuilderA.Build();
@@ -66,8 +66,8 @@ static void PrintProductParts(Product product)
 
 static void ExampleImplementationWithoutDirector()
 {
-	BenzBuilder benzBuilder = new();
-	BmwBuilder bmwBuilder = new();
+	IVehicleBuilder benzBuilder = new BenzBuilder();
+	IVehicleBuilder bmwBuilder = new BmwBuilder();
 
 	Vehicle benz = benzBuilder
 		.SetType()
@@ -94,8 +94,8 @@ static void ExampleImplementationWithDirector()
 {
 	Shop shop = new();
 
-	BenzBuilder benzBuilder = new();
-	BmwBuilder bmwBuilder = new();
+	IVehicleBuilder benzBuilder = new BenzBuilder();
+	IVehicleBuilder bmwBuilder = new BmwBuilder();
 
 	shop.Construct(benzBuilder);
 	Vehicle benz = benzBuilder.Build();
