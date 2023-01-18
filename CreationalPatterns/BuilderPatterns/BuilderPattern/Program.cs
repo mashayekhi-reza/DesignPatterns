@@ -14,8 +14,8 @@ static void StructuralImplementation()
 {
 	Director director = new();
 
-	ConcreteBuilderA concreteBuilderA = new();
-	ConcreteBuilderB concreteBuilderB = new();
+	IBuilder concreteBuilderA = new ConcreteBuilderA();
+	IBuilder concreteBuilderB = new ConcreteBuilderB();
 
 	director.Contruct(concreteBuilderA);
 	Product productA = concreteBuilderA.GetProduct();
@@ -37,10 +37,10 @@ static void PrintProductParts(Product product)
 
 static void ExampleImplementation()
 {
-	BenzBuilder benzBuilder = new();
-	BmwBuilder bmwBuilder = new();
-
 	Shop shop = new();
+
+	IVehicleBuilder benzBuilder = new BenzBuilder();
+	IVehicleBuilder bmwBuilder = new BmwBuilder();
 
 	shop.Construct(benzBuilder);
 	Vehicle benz = benzBuilder.GetVehicle();
