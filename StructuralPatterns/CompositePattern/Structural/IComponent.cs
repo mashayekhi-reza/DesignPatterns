@@ -2,8 +2,8 @@
 {
 	public interface IComponent
 	{
-		public string Name { get; }
+		string Name { get; }
 
-		public string Operation();
+		string Operation();
 	}
 }
