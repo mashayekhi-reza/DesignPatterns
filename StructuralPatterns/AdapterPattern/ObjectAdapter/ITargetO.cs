@@ -2,6 +2,6 @@
 {
 	public interface ITargetO
 	{
-		public string Request();
+		string Request();
 	}
 }

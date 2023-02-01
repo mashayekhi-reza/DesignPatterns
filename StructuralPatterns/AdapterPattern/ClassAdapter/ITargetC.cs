@@ -2,6 +2,6 @@
 {
 	public interface ITargetC
 	{
-		public string Request();
+		string Request();
 	}
 }

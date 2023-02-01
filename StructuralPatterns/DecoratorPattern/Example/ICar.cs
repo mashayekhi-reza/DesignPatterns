@@ -2,8 +2,8 @@
 {
 	public interface ICar
 	{
-		public string GetDescription();
+		string GetDescription();
 
-		public double GetCost();
+		double GetCost();
 	}
 }

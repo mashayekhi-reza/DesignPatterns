@@ -2,6 +2,6 @@
 {
 	public interface IFuelProvider
 	{
-		public string Fillup();
+		string Fillup();
 	}
 }
