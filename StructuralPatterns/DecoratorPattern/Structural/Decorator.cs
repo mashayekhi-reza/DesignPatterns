@@ -10,6 +10,9 @@
 		}
 
 
-		public abstract string Operation();
+		public virtual string Operation()
+		{
+			return _component.Operation();
+		}
 	}
 }

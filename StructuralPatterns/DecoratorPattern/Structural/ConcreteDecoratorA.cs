@@ -8,7 +8,7 @@
 
 		public override string Operation()
 		{
-			return $"{_component.Operation()}, {GetType().Name}";
+			return $"{base.Operation()}, {GetType().Name}";
 		}
 	}
 }
