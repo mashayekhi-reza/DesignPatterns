@@ -1,0 +1,15 @@
+﻿namespace FacadePattern.Structural
+{
+	public class SecondSubSystem : ISecondSubSystem
+	{
+		public string MethodA()
+		{
+			return $"{GetType().Name}.{System.Reflection.MethodBase.GetCurrentMethod()?.Name}";
+		}
+
+		public string MethodB()
+		{
+			return $"{GetType().Name}.{System.Reflection.MethodBase.GetCurrentMethod()?.Name}";
+		}
+	}
+}
