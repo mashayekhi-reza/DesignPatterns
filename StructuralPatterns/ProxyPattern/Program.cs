@@ -1,8 +1,11 @@
-﻿using ProxyPattern.Structural;
+﻿using ProxyPattern.Example;
+using ProxyPattern.Structural;
 
 Console.WriteLine("Proxy Pattern");
 
 StructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -35,4 +38,16 @@ static void StructuralImplementation()
 	var chainProxyNormalUser = new ChainProxy("NormalUser");
 	Console.WriteLine("Proxy Request");
 	chainProxyNormalUser.Request();
+}
+
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nProxy Pattern Example Implementation\n");
+
+	var chainDocumentProxyWithAccess = new DocumentAccessControlProxy("user");
+	chainDocumentProxyWithAccess.DisplayDocument();
+
+	var chainDocumentProxyWithoutAccess = new DocumentAccessControlProxy("viewer");
+	chainDocumentProxyWithoutAccess.DisplayDocument();
+
 }

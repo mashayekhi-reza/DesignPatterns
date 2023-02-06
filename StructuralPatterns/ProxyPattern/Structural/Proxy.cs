@@ -2,10 +2,11 @@
 
 public class Proxy : ISubject
 {
-	private readonly ISubject _subject = new RealSubject();
+	private readonly ISubject _subject;
 
 	public Proxy()
 	{
+		_subject = new RealSubject();
 		Console.WriteLine("Proxy is created");
 	}
 

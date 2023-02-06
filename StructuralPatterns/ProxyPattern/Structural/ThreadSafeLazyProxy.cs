@@ -2,10 +2,11 @@
 
 public class ThreadSafeLazyProxy : ISubject
 {
-	private Lazy<ISubject> _subject = new(() => new RealSubject());
+	private readonly Lazy<ISubject> _subject;
 
 	public ThreadSafeLazyProxy()
 	{
+		_subject = new(() => new RealSubject());
 		Console.WriteLine("Thread Safe Lazy Proxy is created");
 	}
 
