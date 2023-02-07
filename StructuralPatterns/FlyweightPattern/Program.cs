@@ -1,8 +1,11 @@
-﻿using FlyweightPattern.Structural;
+﻿using FlyweightPattern.Example;
+using FlyweightPattern.Structural;
 
 Console.WriteLine("Flyweight Pattern");
 
 StructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -29,4 +32,25 @@ static void StructuralImplementation()
 
 	Console.WriteLine("Unshare Flyweight and the extrinsic state is 6:");
 	factory.GetUnsharedFlyweight().Operation("6");
+}
+
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nFlyweight Pattern Example Implementation\n");
+
+	string document = "abbac";
+
+	var chars = document.ToCharArray();
+
+	var factory = new DocumentFactory();
+
+	var defaultFontSize = 10;
+
+	foreach(var c in chars)
+	{
+		factory.GetCharacter(c).Print(defaultFontSize++);
+	}
+
+	factory.GetParagraph(document).Print(defaultFontSize++);
+	factory.GetParagraph("Another text added.").Print(defaultFontSize++);
 }
