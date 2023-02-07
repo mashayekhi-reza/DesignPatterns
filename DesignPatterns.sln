@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePattern", "Structu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern", "StructuralPatterns\FacadePattern\FacadePattern.csproj", "{E9B3F940-01B3-4598-AA9B-289D6B7136B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "StructuralPatterns\ProxyPattern\ProxyPattern.csproj", "{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyPattern", "StructuralPatterns\ProxyPattern\ProxyPattern.csproj", "{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "StructuralPatterns\FlyweightPattern\FlyweightPattern.csproj", "{042B06BF-BE95-4F93-A771-77834DF5E644}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042B06BF-BE95-4F93-A771-77834DF5E644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042B06BF-BE95-4F93-A771-77834DF5E644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042B06BF-BE95-4F93-A771-77834DF5E644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042B06BF-BE95-4F93-A771-77834DF5E644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{D9DAB735-DFE1-46BC-8B43-5F842A1EE470} = {517FC83D-184A-4BA3-959F-0032AFC4B7DB}
 		{E9B3F940-01B3-4598-AA9B-289D6B7136B9} = {517FC83D-184A-4BA3-959F-0032AFC4B7DB}
 		{DD96E7EF-7A9B-4245-B801-FF6EC5A2ECB1} = {517FC83D-184A-4BA3-959F-0032AFC4B7DB}
+		{042B06BF-BE95-4F93-A771-77834DF5E644} = {517FC83D-184A-4BA3-959F-0032AFC4B7DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89CAD6C2-0A20-4A9F-9CF7-2CE4D76545A6}
