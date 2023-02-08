@@ -8,6 +8,6 @@ public abstract class AbstractClass
 		PrimitiveOperation2();
 	}
 
-	public abstract void PrimitiveOperation1();
-	public abstract void PrimitiveOperation2();
+	protected abstract void PrimitiveOperation1();
+	protected abstract void PrimitiveOperation2();
 }
