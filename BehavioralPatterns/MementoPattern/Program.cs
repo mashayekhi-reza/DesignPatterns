@@ -1,8 +1,11 @@
-﻿using MementoPattern.Structural;
+﻿using MementoPattern.Example;
+using MementoPattern.Structural;
 
 Console.WriteLine("Memento Pattern");
 
 StructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -21,4 +24,18 @@ static void StructuralImplementation()
 	originator.RestoreMemento(careTaker.Memento);
 }
 
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nMemento Pattern Example Implementation\n");
 
+	var robot = new Robot();
+
+	var robotMovementManager = new RobotMovementManager();
+
+	robotMovementManager.ExecuteCommand(new RobotCommand(robot, 50));
+	robotMovementManager.ExecuteCommand(new RobotCommand(robot, 20));
+	robotMovementManager.Undo();
+
+	Console.WriteLine("Out of range movement!");
+	robotMovementManager.ExecuteCommand(new RobotCommand(robot, 120));
+}
