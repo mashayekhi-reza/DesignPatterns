@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CommandPattern.Structural;
+﻿namespace CommandPattern.Structural;
 
 public class Receiver
 {
