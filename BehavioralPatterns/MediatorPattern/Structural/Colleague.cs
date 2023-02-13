@@ -2,11 +2,11 @@
 
 public abstract class Colleague
 {
-	protected IMediator Mediator;
+	protected IMediator _mediator;
 
 	public Colleague(IMediator mediator)
 	{
-		Mediator = mediator;
+		_mediator = mediator;
 	}
 
 	public abstract void Send(string message);

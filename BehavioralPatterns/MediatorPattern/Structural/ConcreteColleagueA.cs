@@ -13,6 +13,6 @@ public class ConcreteColleagueA : Colleague
 
 	public override void Send(string message)
 	{
-		Mediator.Send(message, this);
+		_mediator.Send(message, this);
 	}
 }
