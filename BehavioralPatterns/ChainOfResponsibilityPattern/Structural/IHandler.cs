@@ -4,5 +4,5 @@ public interface IHandler<T>
 {
 	void Handle(T request);
 
-	void SetSuccessor(IHandler<T> successor);
+	IHandler<T> SetSuccessor(IHandler<T> successor);
 }

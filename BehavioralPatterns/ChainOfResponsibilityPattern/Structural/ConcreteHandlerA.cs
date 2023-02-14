@@ -16,8 +16,9 @@ public class ConcreteHandlerA : IHandler<int>
 		}
 	}
 
-	public void SetSuccessor(IHandler<int> successor)
+	public IHandler<int> SetSuccessor(IHandler<int> successor)
 	{
 		_successor = successor;
+		return successor;
 	}
 }

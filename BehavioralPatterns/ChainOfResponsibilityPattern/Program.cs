@@ -13,8 +13,8 @@ static void StructuralImplementation()
 	IHandler<int> handlerA = new ConcreteHandlerA();
 	IHandler<int> handlerB = new ConcreteHandlerB();
 	IHandler<int> handlerC = new ConcreteHandlerC();
-    handlerA.SetSuccessor(handlerB);
-    handlerB.SetSuccessor(handlerC);
+    handlerA.SetSuccessor(handlerB)
+        .SetSuccessor(handlerC);
 
     var requests = new int[] { 2, 5, 14, 22, 118, 3, 27, 20 };
     foreach (int request in requests)
