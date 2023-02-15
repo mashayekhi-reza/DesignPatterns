@@ -1,4 +1,4 @@
-﻿using Observer_Pattern.Structural;
+﻿using ObserverPattern.Structural;
 
 Console.WriteLine("Observer Pattern");
 

@@ -1,4 +1,4 @@
-﻿namespace Observer_Pattern.Structural;
+﻿namespace ObserverPattern.Structural;
 
 public class ConcreteSubject : Subject<string> 
 {
