@@ -1,8 +1,11 @@
-﻿using ObserverPattern.Structural;
+﻿using ObserverPattern.Example;
+using ObserverPattern.Structural;
 
 Console.WriteLine("Observer Pattern");
 
 StructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -25,4 +28,24 @@ static void StructuralImplementation()
 	subject.Detach(observerB);
 	subject.ChangeName("NewNameB");
 
+}
+
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nObserver Pattern Example Implementation\n");
+
+	var engineersChannel = new EngineersChannel();
+	var managersChannel = new ManagerChannel();
+
+	var generalEventsService = new CompanyEventService();
+	generalEventsService.Attach(managersChannel);
+	generalEventsService.Attach(engineersChannel);
+
+	var engineersEventsService = new CompanyEventService();
+	engineersEventsService.Attach(engineersChannel);
+
+	generalEventsService.AnnounceEvent("New General Event for Everyone", 200);
+
+	Console.WriteLine();
+	engineersEventsService.AnnounceEvent("New Technical Event for Engineers", 100);
 }
