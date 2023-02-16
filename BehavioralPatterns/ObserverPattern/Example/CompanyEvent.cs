@@ -1,6 +1,4 @@
-﻿using ObserverPattern.Structural;
-
-namespace ObserverPattern.Example;
+﻿namespace ObserverPattern.Example;
 
 public class CompanyEvent
 {
