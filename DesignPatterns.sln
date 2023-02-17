@@ -57,7 +57,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibilityPatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern", "BehavioralPatterns\ObserverPattern\ObserverPattern.csproj", "{4D6DB0A0-AF19-4502-86EA-F286C73AC234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "BehavioralPatterns\StatePattern\StatePattern.csproj", "{971D91F0-3F6F-4833-8017-8FC06AD6591F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatePattern", "BehavioralPatterns\StatePattern\StatePattern.csproj", "{971D91F0-3F6F-4833-8017-8FC06AD6591F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorPattern", "BehavioralPatterns\IteratorPattern\IteratorPattern.csproj", "{CC96752D-76A8-44F3-BB90-1D057CF0AEA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +159,10 @@ Global
 		{971D91F0-3F6F-4833-8017-8FC06AD6591F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{971D91F0-3F6F-4833-8017-8FC06AD6591F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{971D91F0-3F6F-4833-8017-8FC06AD6591F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC96752D-76A8-44F3-BB90-1D057CF0AEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC96752D-76A8-44F3-BB90-1D057CF0AEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC96752D-76A8-44F3-BB90-1D057CF0AEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC96752D-76A8-44F3-BB90-1D057CF0AEA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,6 +193,7 @@ Global
 		{0E5319F6-EB76-4FB2-9184-1EAFA8DA4FE7} = {1AF3AE9A-CFA7-4148-AB49-02B2B0F515F5}
 		{4D6DB0A0-AF19-4502-86EA-F286C73AC234} = {1AF3AE9A-CFA7-4148-AB49-02B2B0F515F5}
 		{971D91F0-3F6F-4833-8017-8FC06AD6591F} = {1AF3AE9A-CFA7-4148-AB49-02B2B0F515F5}
+		{CC96752D-76A8-44F3-BB90-1D057CF0AEA0} = {1AF3AE9A-CFA7-4148-AB49-02B2B0F515F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89CAD6C2-0A20-4A9F-9CF7-2CE4D76545A6}
