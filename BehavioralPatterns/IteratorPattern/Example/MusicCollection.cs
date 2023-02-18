@@ -1,6 +1,4 @@
-﻿using IteratorPattern.Structural;
-
-namespace IteratorPattern.Example;
+﻿namespace IteratorPattern.Example;
 
 public class MusicCollection : List<Music>, IMusicCollection
 {
