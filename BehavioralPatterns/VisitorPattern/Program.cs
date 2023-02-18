@@ -1,8 +1,11 @@
-﻿using VisitorPattern.Structural;
+﻿using VisitorPattern.SimplifiedStructural;
+using VisitorPattern.Structural;
 
 Console.WriteLine("Visitor Pattern");
 
 StructuralImplementation();
+
+SimplifiedStructuralImplementation();
 
 Console.ReadKey();
 
@@ -17,4 +20,17 @@ static void StructuralImplementation()
 
 	objectStructure.Accept(new ConcreteVisitorA());
 	objectStructure.Accept(new ConcreteVisitorB());
+}
+
+static void SimplifiedStructuralImplementation()
+{
+	Console.WriteLine("\nSimplified Visitor Pattern Structural Implementation\n");
+
+	var objectStructure = new SimplifiedObjectStructure();
+
+	objectStructure.Attach(new ConcreteSimplifiedElementA());
+	objectStructure.Attach(new ConcreteSimplifiedElementB());
+
+	objectStructure.Accept(new ConcreteSimplifiedVisitorA());
+	objectStructure.Accept(new ConcreteSimplifiedVisitorB());
 }
