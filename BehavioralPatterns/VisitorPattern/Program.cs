@@ -1,4 +1,5 @@
-﻿using VisitorPattern.SimplifiedStructural;
+﻿using VisitorPattern.Example;
+using VisitorPattern.SimplifiedStructural;
 using VisitorPattern.Structural;
 
 Console.WriteLine("Visitor Pattern");
@@ -6,6 +7,8 @@ Console.WriteLine("Visitor Pattern");
 StructuralImplementation();
 
 SimplifiedStructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -33,4 +36,19 @@ static void SimplifiedStructuralImplementation()
 
 	objectStructure.Accept(new ConcreteSimplifiedVisitorA());
 	objectStructure.Accept(new ConcreteSimplifiedVisitorB());
+}
+
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nVisitor Pattern Example Implementation\n");
+
+	var employees = new Employees();
+
+	employees.Attach(new Engineer("Engineer1", 10000));
+	employees.Attach(new Engineer("Engineer2", 20000));
+	employees.Attach(new Manager("Manager1", 10000));
+	employees.Attach(new Manager("Manager2", 20000));
+
+	employees.Accept(new IncreaseIncomeVisitor());
+	employees.Accept(new VacationVisitor());
 }
