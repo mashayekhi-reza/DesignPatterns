@@ -1,8 +1,11 @@
-﻿using InterpreterPattern.Structural;
+﻿using InterpreterPattern.Example;
+using InterpreterPattern.Structural;
 
 Console.WriteLine("Interpreter Pattern");
 
 StructuralImplementation();
+
+ExampleImplementation();
 
 Console.ReadKey();
 
@@ -22,4 +25,26 @@ static void StructuralImplementation()
 	{
 		expression.Interpret(context);
 	}
+}
+
+static void ExampleImplementation()
+{
+	Console.WriteLine("\nInterpreter Pattern Example Implementation\n");
+
+	var binaryContext = new BinaryContext("11110001");
+
+	var expressions = new List<IBinaryExpression>
+	{
+		new HexadecimalExpression(),
+		new DecimalExpression()
+	};
+
+	foreach (var expression in expressions)
+	{
+		expression.Interpret(binaryContext);
+	}
+
+	Console.WriteLine($"{binaryContext.Input} converted to " +
+		$"Hexadecimal: {binaryContext.Hexadecimal} and " +
+		$"Decimal: {binaryContext.Decimal}");
 }
