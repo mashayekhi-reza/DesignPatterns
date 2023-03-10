@@ -29,7 +29,7 @@ static void ExampleImplementation()
 {
 	Console.WriteLine("\nExample Implementation\n");
 
-	IVehicleFactory factory = new VehicleFactoryWithoutSwitchCase();
+	IVehicleFactory factory = new VehicleFactory();
 
 	Console.WriteLine($"Order Car to Drive: {factory.CreateVehicle("Car").Drive()}");
 	Console.WriteLine($"Order Boat to Drive: {factory.CreateVehicle("Boat").Drive()}");
